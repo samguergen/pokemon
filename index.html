@@ -4,14 +4,16 @@
 </head>
 
 <body ng-app="myApp" ng-controller="AppCtrl">
-	<h2>Welcome to Pokemon Go! You can view the contents of your bag below.</h2>
+	<h2>Welcome to Pokemon Go!</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<div><button class="addPoke" ng-click="createPoke = true">Add Pokemon or Item<button></div>
+  		<div><button class="addPoke" ng-click="createPoke = true">Add Item<button></div>
   		<div class="pokeform" ng-show="createPoke == true">
-  			Name: <input type="text" id="name"><br>
-  			<input type="radio" name="which" value="pokemon">Pokemon
-  			<input type="radio" name="which" value="pokemon">Item<br>
-  			Description<input type="text" id="description">
+  			Name: <input type="text" id="name" ng-model="poke.name"><br>
+  			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
+  			<input type="radio" name="which" value="pokemon" ng-model="poke.type">Item<br>
+  			Description:<input type="text" id="description" ng-model="poke.description">
+  			Image URL:<input type="text" id="image" ng-model="poke.url">
+  			<button id="add" ng-click="addItem(poke)">Add</button>
   		</div>
 <!--   		<p class="pokebag-content">
   			<div class="pokemon"><button>Remove</button> 

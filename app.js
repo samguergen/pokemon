@@ -5,21 +5,25 @@ angular.module('myApp', [])
   $scope.inBag = [
 	{name: 'pikachu',
 	description: "the most popular",
+	type: "pokemon",
 	evoluted: false,
 	imagePath: "img/pikachu.png"},
 
 	{name: 'squirtle',
 	description: "the aquatic",
+	type: "pokemon",
 	evoluted: false,
 	imagePath: "img/squirtle.png"},
 
 	{name: 'jelly',
 	description: "the aquatic",
+	type: "item",
 	evoluted: false,
 	imagePath: "img/jelly.jpg"},
 
 	{name: 'dots',
 	description: "the aquatic",
+	type: "item",
 	evoluted: false,
 	imagePath: "img/dots.jpg"},
   ];
@@ -36,6 +40,11 @@ $scope.removeItem = function(item) {
 	if (index > -1) {
     $scope.inBag.splice(index, 1);
 	}
+}
+
+$scope.addItem = function(item){
+	console.log('item to add is ', item);
+	$scope.inBag.push(item);
 }
 
 })
