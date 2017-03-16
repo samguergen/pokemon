@@ -40,9 +40,9 @@ $scope.removeItem = function(item) {
 
 })
 
-$(document).ready(function(){
-	$('button').click(function(){
-	$(this).hide();
-	$(this).next().hide();
-	})	
-})
+// $(document).ready(function(){
+// 	$('button').click(function(){
+// 	$(this).hide();
+// 	$(this).next().hide();
+// 	})	
+// })
