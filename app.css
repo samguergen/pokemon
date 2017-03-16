@@ -14,6 +14,14 @@ button {
 	 float: left;
     position: absolute;
 }
+.pokeForm {
+	margin-top: -35%;
+    margin-left: 45%;
+    border-radius: 5px;
+    position: absolute;
+    border: 1px solid brown;
+    padding: 5%;
+}
 
 .addPoke {
 	top: 35%;

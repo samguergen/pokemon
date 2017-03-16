@@ -8,9 +8,9 @@
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
   		<div><button class="addPoke" ng-click="createPoke = true">Add Pokemon or Item<button></div>
   		<div class="pokeform" ng-show="createPoke == true">
-  			Name: <input type="text" id="name">
+  			Name: <input type="text" id="name"><br>
   			<input type="radio" name="which" value="pokemon">Pokemon
-  			<input type="radio" name="which" value="pokemon">Item
+  			<input type="radio" name="which" value="pokemon">Item<br>
   			Description<input type="text" id="description">
   		</div>
   		<p class="pokebag-content">
@@ -22,6 +22,10 @@
 	  		<img src="img/jelly.jpg"/ id="jelly"></div>
 	  		<div class="pokemon"><button>Remove</button> 
 	  		<img src="img/dots.jpg"/ id="dots"></div>
+  		</p>
+
+  		<p ng-repeat="item in inBag">
+  			{{item}}
   		</p>
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
