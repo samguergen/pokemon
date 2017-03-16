@@ -9,6 +9,7 @@ angular.module('myApp', [])
 $(document).ready(function(){
 	$('button').click(function(){
 	console.log('clicked');
+	$(this).hide();
 	$(this).next().hide();
 	})	
 })
