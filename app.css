@@ -1,9 +1,16 @@
 #pokebag {
 	height: 300px;
-	display: inline;
 }
 
 #pikachu, #squirtle, #jelly, #dots {
 	height: 100px;
+}
+
+.pokemon {
 	display: inline;
+}
+
+button {
+	 float: left;
+    position: absolute;
 }
