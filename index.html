@@ -6,6 +6,13 @@
 <body ng-app="myApp" ng-controller="AppCtrl">
 	<h2>Welcome to Pokemon Go! You can view the contents of your bag below.</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
+  		<div><button class="addPoke" ng-click="createPoke = true">Add Pokemon or Item<button></div>
+  		<div class="pokeform" ng-show="createPoke == true">
+  			Name: <input type="text" id="name">
+  			<input type="radio" name="which" value="pokemon">Pokemon
+  			<input type="radio" name="which" value="pokemon">Item
+  			Description<input type="text" id="description">
+  		</div>
   		<p class="pokebag-content">
   			<div class="pokemon"><button>Remove</button> 
 	  		<img src="img/pikachu.png"/ id="pikachu"></div>
