@@ -1,3 +1,9 @@
 #pokebag {
 	height: 300px;
+	display: inline;
+}
+
+#pikachu, #squirtle, #jelly, #dots {
+	height: 100px;
+	display: inline;
 }
