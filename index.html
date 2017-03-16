@@ -13,7 +13,7 @@
   			<input type="radio" name="which" value="pokemon">Item<br>
   			Description<input type="text" id="description">
   		</div>
-  		<p class="pokebag-content">
+<!--   		<p class="pokebag-content">
   			<div class="pokemon"><button>Remove</button> 
 	  		<img src="img/pikachu.png"/ id="pikachu"></div>
 	  		<div class="pokemon"><button>Remove</button> 
@@ -22,10 +22,16 @@
 	  		<img src="img/jelly.jpg"/ id="jelly"></div>
 	  		<div class="pokemon"><button>Remove</button> 
 	  		<img src="img/dots.jpg"/ id="dots"></div>
-  		</p>
+  		</p> -->
 
-  		<p ng-repeat="item in inBag">
-  			{{item}}
+  		<p ng-repeat="item in inBag" class="pokebag-content">
+  			<button ng-click="removeItem(item)">Remove</button>
+  			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/>
+  			<div style="background:red;position: absolute;
+    top: 94%;" ng-show="disp == true">
+  				Hello
+  				{{item}}
+  			</div>
   		</p>
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>

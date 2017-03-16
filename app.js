@@ -25,6 +25,19 @@ angular.module('myApp', [])
   ];
 
 
+$scope.displayDetails = function() {
+	console.log('clicked');
+	$scope.disp = true;
+}
+
+$scope.removeItem = function(item) {
+	console.log('item to rm is ', item);
+	var index = $scope.inBag.indexOf(item);
+	if (index > -1) {
+    $scope.inBag.splice(index, 1);
+	}
+}
+
 })
 
 $(document).ready(function(){

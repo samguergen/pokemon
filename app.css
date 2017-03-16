@@ -27,3 +27,8 @@ button {
 	top: 35%;
     left: 60%;
 }
+
+.itemImg {
+	height: 100px;
+	display: inline;
+}
