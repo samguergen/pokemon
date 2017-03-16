@@ -6,25 +6,25 @@ angular.module('myApp', [])
 	{name: 'pikachu',
 	description: "the most popular",
 	type: "pokemon",
-	evoluted: false,
+	evolved: false,
 	imagePath: "img/pikachu.png"},
 
 	{name: 'squirtle',
 	description: "the aquatic",
 	type: "pokemon",
-	evoluted: false,
+	evolved: false,
 	imagePath: "img/squirtle.png"},
 
 	{name: 'jelly',
-	description: "the aquatic",
+	description: "jelly beans",
 	type: "item",
-	evoluted: false,
+	evolved: false,
 	imagePath: "img/jelly.jpg"},
 
 	{name: 'dots',
-	description: "the aquatic",
+	description: "smaller pieces",
 	type: "item",
-	evoluted: false,
+	evolved: false,
 	imagePath: "img/dots.jpg"},
   ];
 

@@ -30,9 +30,11 @@
   			<button ng-click="removeItem(item)">Remove</button>
   			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/>
   			<div style="background:red;position: absolute;
-    top: 94%;" ng-show="disp == true">
-  				Hello
-  				{{item}}
+    top: 94%;" ng-show="disp == true" ng-repeat="item in inBag">
+  				Name:{{item.name}}<br>
+  				 Description:{{item.description}}<br>
+  				 Type: {{item.type}}<br>
+  				 Evolved: {{item.evoluted}}<br>
   			</div>
   		</p>
 	<script src="third_party/jquery.min.js"></script>
