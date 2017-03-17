@@ -15,27 +15,14 @@
   			Image URL:<input type="text" id="image" ng-model="poke.url">
   			<button id="add" ng-click="addItem(poke); createPoke = false">Add</button>
   		</div>
-<!--   		<p class="pokebag-content">
-  			<div class="pokemon"><button>Remove</button> 
-	  		<img src="img/pikachu.png"/ id="pikachu"></div>
-	  		<div class="pokemon"><button>Remove</button> 
-	  		<img src="img/squirtle.png"/ id="squirtle"></div>
-	  		<div class="pokemon"><button>Remove</button> 
-	  		<img src="img/jelly.jpg"/ id="jelly"></div>
-	  		<div class="pokemon"><button>Remove</button> 
-	  		<img src="img/dots.jpg"/ id="dots"></div>
-  		</p> -->
 
   		<div ng-repeat="item in inBag" class="pokebag-content">
   			<button ng-click="removeItem(item)">Remove</button>
   			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/> 
-        <div class="pokeDetails">{{item.name }}</div>
-<!--   			<div class="pokeDetails" ng-show="disp == true" ng-repeat="item in inBag">
-  				Name:{{item.name}}<br>
-  				 Description:{{item.description}}<br>
-  				 Type: {{item.type}}<br>
-  				 Evolved: {{item.evoluted}}<br>
-  			</div> -->
+        <div class="pokeDetails">Name:{{item.name}}<br>
+           Description:{{item.description}}<br>
+           Type: {{item.type}}<br></div>
+
   		</div>
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
