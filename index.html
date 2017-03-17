@@ -26,17 +26,17 @@
 	  		<img src="img/dots.jpg"/ id="dots"></div>
   		</p> -->
 
-  		<p ng-repeat="item in inBag" class="pokebag-content">
+  		<div ng-repeat="item in inBag" class="pokebag-content">
   			<button ng-click="removeItem(item)">Remove</button>
-  			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/>
-  			<div style="background:red;position: absolute;
-    top: 94%;" ng-show="disp == true" ng-repeat="item in inBag">
+  			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/> 
+        <div class="pokeDetails">{{item.name }}</div>
+<!--   			<div class="pokeDetails" ng-show="disp == true" ng-repeat="item in inBag">
   				Name:{{item.name}}<br>
   				 Description:{{item.description}}<br>
   				 Type: {{item.type}}<br>
   				 Evolved: {{item.evoluted}}<br>
-  			</div>
-  		</p>
+  			</div> -->
+  		</div>
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
 	<script src="app.js"></script>
