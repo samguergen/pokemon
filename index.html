@@ -6,7 +6,15 @@
 <body ng-app="myApp" ng-controller="AppCtrl">
 	<h2>Welcome to Pokemon Go!</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<div><button ng-hide="createPoke == true" class="addPoke" ng-click="createPoke = true">Add Item<button></div>
+  		<div>
+        <button ng-hide="createPoke == true" class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
+        <button ng-hide="feedPoke == true" class="feedPoke" ng-click="feedPoke = true">Feed Pokemon</button> 
+      </div>
+      <div class="feed" ng-show="feedPoke == true">
+        <div class="which-feed">Which Pokemon would you like to feed? <br>
+          <div ng-repeat="item in inBag | filter: {type: 'pokemon'}">{{item.name}}</div>
+        </div>
+      </div>
   		<div class="pokeform" ng-show="createPoke == true">
   			Name: <input type="text" id="name" ng-model="poke.name"><br>
   			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
