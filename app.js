@@ -15,15 +15,15 @@ angular.module('myApp', [])
 	evolved: false,
 	imagePath: "img/squirtle.png"},
 
-	{name: 'candy',
-	description: "jelly beans",
-	type: "item",
+	{name: 'jelly beans',
+	description: "this candy will make your pokemon evolve.",
+	type: "candy",
 	evolved: false,
 	imagePath: "img/jelly.jpg"},
 
-	{name: 'candy',
-	description: "smaller pieces",
-	type: "item",
+	{name: 'pieces',
+	description: "this candy will make your pokemon evolve.",
+	type: "candy",
 	evolved: false,
 	imagePath: "img/dots.jpg"},
   ];
@@ -62,7 +62,6 @@ $scope.feedPokemon = function(pokemon){
 $scope.feedPokemon2 = function(candy){
 	console.log("candy was ", candy);
 	$scope.feed.candy = candy.description;
-	// console.log("feed is ", $scope.feed);
 	for (var x=0; x < $scope.inBag.length; x++){
 		console.log("hey");
 		if ($scope.inBag[x].name == $scope.feed.name){
