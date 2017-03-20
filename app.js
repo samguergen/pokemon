@@ -57,8 +57,20 @@ $scope.feedPokemon = function(pokemon){
 	$scope.feedPoke = true;
 	console.log('pokemon is ', pokemon);
 	$scope.feed.name = pokemon.name;
-	console.log('feed is ', $scope.feed.pokemon);
+}
 
+$scope.feedPokemon2 = function(candy){
+	console.log("candy was ", candy);
+	$scope.feed.candy = candy.description;
+	// console.log("feed is ", $scope.feed);
+	for (var x=0; x < $scope.inBag.length; x++){
+		console.log("hey");
+		if ($scope.inBag[x].name == $scope.feed.name){
+			console.log($scope.inBag[x]);
+			$scope.inBag.splice(x, 1);
+		}
+		console.log($scope.inBag);
+	}
 }
 
 })

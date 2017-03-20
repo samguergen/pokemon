@@ -8,13 +8,7 @@
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
   		<div>
         <button ng-hide="createPoke == true" class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
-  <!--       <button ng-hide="feedPoke == true" class="feedPoke" ng-click="feedPoke = true">Feed Pokemon</button> --> 
       </div>
-      <!-- <div class="feed" ng-show="feedPoke == true">
-        <div class="which-feed">Which Pokemon would you like to feed? <br>
-          <div ng-repeat="item in inBag | filter: {type: 'pokemon'}">{{item.name}}</div>
-        </div>
-      </div> -->
   		<div class="pokeform" ng-show="createPoke == true">
   			Name: <input type="text" id="name" ng-model="poke.name"><br>
   			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
@@ -32,14 +26,9 @@
            Type: {{item.type}}<br></div>
            <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)"> Feed pokemon </button>
             <div ng-show="feedPoke == true; item.name==feed.name"> 
-              <div ng-repeat="item in inBag | filter: {name: 'candy'}"><img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/></div>
+              <div ng-repeat="item in inBag | filter: {name: 'candy'}"><img src="{{item.imagePath}}" ng-click="feedPokemon2(item)" class="itemImg"/></div>
             </div>
           </div>
-
-           
-<!--            <div ng-show="feedPoke == true; item.type='item'"> {{item.name}}</div> -->
-  		
-
 
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
