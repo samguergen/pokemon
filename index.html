@@ -31,7 +31,7 @@
            Description:{{item.description}}<br>
            Type: {{item.type}}<br></div>
            <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)"> Feed pokemon </button>
-            <div ng-show="feedPoke == true; item.name=='candy'">What would you like to feed your Pokemon?</div>
+            <div ng-show="feedPoke == true; item.name==feed.name"><img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/></div>
           </div>
 
            

@@ -29,6 +29,7 @@ angular.module('myApp', [])
   ];
 
   $scope.feed = {
+  	name: '',
   	pokemon: '',
   	candy: ''
   }
@@ -55,7 +56,9 @@ $scope.addItem = function(item){
 $scope.feedPokemon = function(pokemon){
 	$scope.feedPoke = true;
 	console.log('pokemon is ', pokemon);
-	$scope.feed.pokemon = pokemon.type
+	$scope.feed.name = pokemon.name;
+	console.log('feed is ', $scope.feed.pokemon);
+
 }
 
 })
