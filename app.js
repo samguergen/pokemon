@@ -15,18 +15,23 @@ angular.module('myApp', [])
 	evolved: false,
 	imagePath: "img/squirtle.png"},
 
-	{name: 'jelly',
+	{name: 'candy',
 	description: "jelly beans",
 	type: "item",
 	evolved: false,
 	imagePath: "img/jelly.jpg"},
 
-	{name: 'dots',
+	{name: 'candy',
 	description: "smaller pieces",
 	type: "item",
 	evolved: false,
 	imagePath: "img/dots.jpg"},
   ];
+
+  $scope.feed = {
+  	pokemon: '',
+  	candy: ''
+  }
 
 
 $scope.displayDetails = function() {
@@ -45,6 +50,12 @@ $scope.removeItem = function(item) {
 $scope.addItem = function(item){
 	console.log('item to add is ', item);
 	$scope.inBag.push(item);
+}
+
+$scope.feedPokemon = function(pokemon){
+	$scope.feedPoke = true;
+	console.log('pokemon is ', pokemon);
+	$scope.feed.pokemon = pokemon.type
 }
 
 })
