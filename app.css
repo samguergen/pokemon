@@ -36,8 +36,8 @@ button {
 }
 
 .addPoke {
-	top: 35%;
-    left: 60%;
+/*	top: 35%;
+    left: 60%;*/
 }
 
 .itemImg {
@@ -51,5 +51,17 @@ button {
 }
 
 .pokebag-content {
+	/*margin-left: 50%;*/
+}
+
+/*p {
+	float: left;
+}*/
+
+.notes {
+	position: absolute;
+	float: left;
 	margin-left: 50%;
+    margin-top: -25%;
+    line-height: 1.5;
 }

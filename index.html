@@ -4,12 +4,12 @@
 </head>
 
 <body ng-app="myApp" ng-controller="AppCtrl">
-	<h2>Welcome to Pokemon Go!</h2>
+	<h2>Manage your Pokebag</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<div class="notes">
+  		<div class="notes" ng-hide="createPoke == true">
         -Hover over your Pokemon for more details <br>
-        -Click below to add something to your bag
-        <button ng-hide="createPoke == true" class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
+        -Click below to add something to your bag <br>
+        <button class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
       </div>
   		<div class="pokeform" ng-show="createPoke == true">
   			Name: <input type="text" id="name" ng-model="poke.name"><br>
@@ -23,7 +23,7 @@
 
   		<div ng-repeat="item in inBag" class="pokebag-content">
   			<button ng-click="removeItem(item)">Remove</button>
-  			<img src="{{item.imagePath}}" ng-click="displayDetails()" class="itemImg"/> 
+  			<img src="{{item.imagePath}}" class="itemImg"/> 
         <div class="pokeDetails">
           Name:{{item.name}}<br>
           Description:{{item.description}}<br>
