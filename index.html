@@ -6,7 +6,9 @@
 <body ng-app="myApp" ng-controller="AppCtrl">
 	<h2>Welcome to Pokemon Go!</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<div>
+  		<div class="notes">
+        -Hover over your Pokemon for more details <br>
+        -Click below to add something to your bag
         <button ng-hide="createPoke == true" class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
       </div>
   		<div class="pokeform" ng-show="createPoke == true">
@@ -27,7 +29,7 @@
           Description:{{item.description}}<br>
           Type: {{item.type}}<br></div>
            <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)"> Feed pokemon </button>
-            <div ng-show="feedPoke == true; item.name==feed.name"> 
+            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> 
               <div ng-repeat="item in inBag | filter: {type: 'candy'}"><img src="{{item.imagePath}}" ng-click="feedPokemon2(item)" class="itemImg"/></div>
             </div>
           </div>

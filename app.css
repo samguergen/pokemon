@@ -35,8 +35,6 @@ button {
  	display: block;
 }
 
-
-
 .addPoke {
 	top: 35%;
     left: 60%;
@@ -44,5 +42,14 @@ button {
 
 .itemImg {
 	height: 100px;
-	display: inline;
+	padding: 2%;
+}
+
+.food-options {
+	margin-left: 25%;
+    margin-top: -10%;
+}
+
+.pokebag-content {
+	margin-left: 50%;
 }
