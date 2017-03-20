@@ -30,8 +30,15 @@
         <div class="pokeDetails">Name:{{item.name}}<br>
            Description:{{item.description}}<br>
            Type: {{item.type}}<br></div>
+           <div ng-show="item.type == 'pokemon'">
+            Feed pokemon
+           </div>           
+<!--            <div ng-repeat="item in inBag | filter: {item.type: 'pokemon'}">
+            Feed pokemon
+           </div> -->
+  		</div>;
 
-  		</div>
+
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
 	<script src="app.js"></script>
