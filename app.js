@@ -30,12 +30,10 @@ angular.module('myApp', [])
 
   $scope.feed = {
   	name: '',
-  	pokemon: '',
   	candy: ''
   }
 
 $scope.removeItem = function(item) {
-	console.log('item to rm is ', item);
 	var index = $scope.inBag.indexOf(item);
 	if (index > -1) {
     $scope.inBag.splice(index, 1);
@@ -43,35 +41,34 @@ $scope.removeItem = function(item) {
 }
 
 $scope.addItem = function(item){
-	console.log('item to add is ', item);
 	$scope.inBag.push(item);
 }
 
 $scope.feedPokemon = function(pokemon){
 	$scope.feedPoke = true;
-	console.log('pokemon is ', pokemon);
 	$scope.feed.name = pokemon.name;
 }
 
 $scope.feedPokemon2 = function(candy){
-	console.log("candy was ", candy.name);
-	$scope.feed.candy = candy.description;
-	for (var x=0; x < $scope.inBag.length; x++){
-		// if ($scope.inBag[x].name == candy.name){
-		// 	$scope.y = x;
-		// }		
+	for (var x=0; x < $scope.inBag.length; x++){	
 		if ($scope.inBag[x].name == $scope.feed.name){
-			console.log($scope.inBag[x]);
 			$scope.inBag.splice(x, 1);
 			for (var y=0; y < $scope.inBag.length; y++){
 				if ($scope.inBag[y].name == candy.name){
-					console.log('hey');
 					$scope.inBag.splice(y, 1);
 				}				
 			}
 		}
-		console.log($scope.inBag);
 	}
+	alert('Your pokemon is evolving...');
+	var mewtwo = 
+		{name: 'Mewtwo',
+		description: "The ultimate evolution",
+		type: "pokemon",
+		evolved: true,
+		imagePath: "img/mewtwo.png"};
+
+	$scope.inBag.push(mewtwo);
 }
 
 })
