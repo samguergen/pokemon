@@ -9,6 +9,10 @@ body {
     padding: 2%;
 }
 
+h2 {
+	text-align: center;
+}
+
 #pokebag {
 	height: 300px;
 }
