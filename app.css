@@ -1,3 +1,14 @@
+body {
+	background: pink;
+}
+
+.wrapper {
+	margin: 3%;
+    background: white;
+    border-radius: 5px;
+    padding: 2%;
+}
+
 #pokebag {
 	height: 300px;
 }
@@ -15,11 +26,12 @@ button {
     position: absolute;
 }
 .pokeForm {
-	margin-top: -35%;
-    margin-left: 45%;
+	margin-top: -25%;
+    margin-left: 30%;
     border-radius: 5px;
     position: absolute;
-    border: 1px solid brown;
+    border: 2px solid black;
+    background: beige;
     padding: 5%;
 }
 
@@ -29,6 +41,7 @@ button {
     position: absolute;
     top: 94%; */
     display: none;
+    padding: 3%;
 }
 
  .itemImg:hover + .pokeDetails{
@@ -36,6 +49,7 @@ button {
 }
 
 .addPoke {
+	margin-top: 2%;
 /*	top: 35%;
     left: 60%;*/
 }
@@ -61,7 +75,7 @@ button {
 .notes {
 	position: absolute;
 	float: left;
-	margin-left: 50%;
+	margin-left: 40%;
     margin-top: -25%;
     line-height: 1.5;
 }

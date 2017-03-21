@@ -4,6 +4,7 @@
 </head>
 
 <body ng-app="myApp" ng-controller="AppCtrl">
+  <div class="wrapper">
 	<h2>Manage your Pokebag</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
   		<div class="notes" ng-hide="createPoke == true">
@@ -16,7 +17,7 @@
   			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
         <input type="radio" name="which" value="candy" ng-model="poke.type">Candy
   			<input type="radio" name="which" value="pokemon" ng-model="poke.type">Item<br>
-  			Description:<input type="text" id="description" ng-model="poke.description">
+  			Description:<input type="text" id="description" ng-model="poke.description"><br>
   			Image URL:<input type="text" id="image" ng-model="poke.url">
   			<button id="add" ng-click="addItem(poke); createPoke = false">Add</button>
   		</div>
@@ -29,7 +30,7 @@
           Description:{{item.description}}<br>
           Type: {{item.type}}<br></div>
            <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)"> Feed pokemon </button>
-            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> 
+            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> Select one of your available candies 
               <div ng-repeat="item in inBag | filter: {type: 'candy'}"><img src="{{item.imagePath}}" ng-click="feedPokemon2(item)" class="itemImg"/></div>
             </div>
           </div>
@@ -37,5 +38,6 @@
 	<script src="third_party/jquery.min.js"></script>
 	<script src="third_party/angular.min.js"></script>
 	<script src="app.js"></script>
+</div>
 </body>
 <html>
