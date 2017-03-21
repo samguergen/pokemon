@@ -23,14 +23,15 @@
   		</div>
 
   		<div ng-repeat="item in inBag" class="pokebag-content">
+        <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)" id="feed-btn"> Feed pokemon </button>
   			<button ng-click="removeItem(item)" id="rm-btn">Remove</button>
   			<img src="{{item.imagePath}}" class="itemImg"/> 
         <div class="pokeDetails">
           Name:{{item.name}}<br>
           Description:{{item.description}}<br>
           Type: {{item.type}}<br></div>
-           <button ng-show="item.type == 'pokemon'" ng-click="feedPokemon(item)" id="feed-btn"> Feed pokemon </button>
-            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> Select one of your available candies 
+           
+            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> Select one of your candies 
               <div ng-repeat="item in inBag | filter: {type: 'candy'}"><img src="{{item.imagePath}}" ng-click="feedPokemon2(item)" class="itemImg"/></div>
             </div>
           </div>

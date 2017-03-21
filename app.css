@@ -41,7 +41,7 @@ button {
     position: absolute;
     top: 94%; */
     display: none;
-    padding: 3%;
+    padding: 1%;
 }
 
  .itemImg:hover + .pokeDetails{
@@ -68,9 +68,15 @@ button {
 	/*margin-left: 50%;*/
 }
 
-/*p {
-	float: left;
-}*/
+#rm-btn {
+	margin-left: 13%;
+    margin-top: 10%;
+}
+
+#feed-btn {
+	margin-top: 8%;
+    margin-left: 13%;
+}
 
 .notes {
 	position: absolute;
