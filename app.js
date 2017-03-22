@@ -30,7 +30,8 @@ angular.module('myApp', [])
 
   $scope.feed = {
   	name: '',
-  	candy: ''
+  	candy: '',
+  	evolved: '',
   }
 
 $scope.addItem = function(item){
@@ -47,29 +48,38 @@ $scope.removeItem = function(item) {
 $scope.feedWho = function(pokemon){
 	$scope.feedPoke = true;
 	$scope.feed.name = pokemon.name;
+	$scope.feed.evolved = pokemon.evolved;
 }
 
 $scope.feedWhat = function(candy){
-	for (var x=0; x < $scope.inBag.length; x++){	
-		if ($scope.inBag[x].name == $scope.feed.name){
-			$scope.inBag.splice(x, 1);
-			for (var y=0; y < $scope.inBag.length; y++){
-				if ($scope.inBag[y].name == candy.name){
-					$scope.inBag.splice(y, 1);
-				}				
+	if ($scope.feed.evolved === false) {
+
+		for (var x=0; x < $scope.inBag.length; x++){	
+			if ($scope.inBag[x].name == $scope.feed.name){
+				$scope.inBag.splice(x, 1);
+				for (var y=0; y < $scope.inBag.length; y++){
+					if ($scope.inBag[y].name == candy.name){
+						$scope.inBag.splice(y, 1);
+					}				
+				}
 			}
 		}
-	}
-	alert("Your pokemon is evolving...");
-	alert("It's a Mewtwo!");
-	var mewtwo = 
-		{name: 'Mewtwo',
-		description: "The ultimate evolution",
-		type: "pokemon",
-		evolved: true,
-		imagePath: "img/mewtwo.jpg"};
+		 //for this assignment, let's assume all pokemon evolve to Mewtwo
+		alert("Your pokemon is evolving...");
+		alert("It's a Mewtwo!");
+		var mewtwo = 
+			{name: 'Mewtwo',
+			description: "The ultimate evolution",
+			type: "pokemon",
+			evolved: true,
+			imagePath: "img/mewtwo.jpg"};
 
-	$scope.inBag.push(mewtwo);
+		$scope.inBag.push(mewtwo);
+	}
+	
+	else {
+		alert("Your Pokemon has finished evolving. Try feeding another.")
+	}
 }
 
 })
