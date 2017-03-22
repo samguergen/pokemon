@@ -33,6 +33,10 @@ angular.module('myApp', [])
   	candy: ''
   }
 
+$scope.addItem = function(item){
+	$scope.inBag.push(item);
+}  
+
 $scope.removeItem = function(item) {
 	var index = $scope.inBag.indexOf(item);
 	if (index > -1) {
@@ -40,16 +44,12 @@ $scope.removeItem = function(item) {
 	}
 }
 
-$scope.addItem = function(item){
-	$scope.inBag.push(item);
-}
-
-$scope.feedPokemon = function(pokemon){
+$scope.feedWho = function(pokemon){
 	$scope.feedPoke = true;
 	$scope.feed.name = pokemon.name;
 }
 
-$scope.feedPokemon2 = function(candy){
+$scope.feedWhat = function(candy){
 	for (var x=0; x < $scope.inBag.length; x++){	
 		if ($scope.inBag[x].name == $scope.feed.name){
 			$scope.inBag.splice(x, 1);
@@ -60,13 +60,14 @@ $scope.feedPokemon2 = function(candy){
 			}
 		}
 	}
-	alert('Your pokemon is evolving...');
+	alert("Your pokemon is evolving...");
+	alert("It's a Mewtwo!");
 	var mewtwo = 
 		{name: 'Mewtwo',
 		description: "The ultimate evolution",
 		type: "pokemon",
 		evolved: true,
-		imagePath: "img/mewtwo.png"};
+		imagePath: "img/mewtwo.jpg"};
 
 	$scope.inBag.push(mewtwo);
 }
