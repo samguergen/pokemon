@@ -7,12 +7,12 @@
   <div class="wrapper">
 	<h2>Manage your Pokebag</h2>
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<div class="notes" ng-hide="createPoke == true">
-        -Hover over your Pokemon for more details <br>
-        -Feed a candy to your Pokemon <br>
-        -Click below to add an item/Pokemon to your bag <br>
+  		<ul class="notes" ng-hide="createPoke == true">
+        <li>Hover over your Pokemon for more details <br>
+        <li>Feed a candy to evolve your Pokemon <br>
+        <li>Click below to add an item/Pokemon to your bag <br>
         <button class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
-      </div>
+      </ul>
   		<div class="pokeform" ng-show="createPoke == true">
   			Name: <input type="text" id="name" ng-model="poke.name"><br>
   			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
