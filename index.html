@@ -19,8 +19,8 @@
         <input type="radio" name="which" value="candy" ng-model="poke.type">Candy
   			<input type="radio" name="which" value="pokemon" ng-model="poke.type">Item<br>
   			Description:<input type="text" id="description" ng-model="poke.description"><br>
-  			Image URL:<input type="text" id="image" ng-model="poke.url">
-  			<button id="add" ng-click="addItem(poke); createPoke = false">Add</button>
+  			Image URL:<input type="text" id="image" ng-model="poke.url"><br>
+  			<button id="add-btn" ng-click="addItem(poke); createPoke = false">Add</button>
   		</div>
 
   		<div ng-repeat="item in inBag" class="pokebag-content">
