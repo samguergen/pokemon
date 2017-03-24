@@ -3,26 +3,26 @@ angular.module('myApp', [])
   console.log('inside the controller');
 
   $scope.inBag = [
-	{name: 'pikachu',
-	description: "the most popular",
+	{name: 'Pikachu',
+	description: "The most popular",
 	type: "pokemon",
 	evolved: false,
 	imagePath: "img/pikachu.png"},
 
-	{name: 'squirtle',
-	description: "the aquatic",
+	{name: 'Squirtle',
+	description: "The aquatic",
 	type: "pokemon",
 	evolved: false,
 	imagePath: "img/squirtle.png"},
 
-	{name: 'jelly beans',
-	description: "this candy will make your pokemon evolve.",
+	{name: 'Jelly beans',
+	description: "Yummy beans that will make your pokemon evolve.",
 	type: "candy",
 	evolved: false,
 	imagePath: "img/jelly.jpg"},
 
-	{name: 'pieces',
-	description: "this candy will make your pokemon evolve.",
+	{name: 'Pieces',
+	description: "This candy will make your pokemon evolve.",
 	type: "candy",
 	evolved: false,
 	imagePath: "img/dots.jpg"},

@@ -6,14 +6,16 @@
 <body ng-app="myApp" ng-controller="AppCtrl">
   <div class="wrapper">
 	<h2>Manage your Pokebag</h2>
+  <hr size="3">
   		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
   		<ul class="notes" ng-hide="createPoke == true">
         <li>Hover over your Pokemon for more details <br>
         <li>Feed a candy to evolve your Pokemon <br>
-        <li>Click below to add an item/Pokemon to your bag <br>
+        <li>Click below to add to your pokeBag <br>
         <button class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
       </ul>
   		<div class="pokeform" ng-show="createPoke == true">
+        <p>New Pokemon </p>
   			Name: <input type="text" id="name" ng-model="poke.name"><br>
   			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
         <input type="radio" name="which" value="candy" ng-model="poke.type">Candy
@@ -28,8 +30,8 @@
   			<button ng-click="removeItem(item)" id="rm-btn">Remove</button>
   			<img src="{{item.imagePath}}" class="itemImg"/> 
         <div class="pokeDetails">
-          Name:{{item.name}}<br>
-          Description:{{item.description}}<br>
+          Name: {{item.name}}<br>
+          Description: {{item.description}}<br>
           Type: {{item.type}}<br></div>
            
             <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> Select one of your candies 
