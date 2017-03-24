@@ -16,13 +16,13 @@ angular.module('myApp', [])
 	imagePath: "img/squirtle.png"},
 
 	{name: 'Jelly beans',
-	description: "Yummy beans that will make your pokemon evolve.",
+	description: "Yummy beans for your Pokemon.",
 	type: "candy",
 	evolved: false,
 	imagePath: "img/jelly.jpg"},
 
 	{name: 'Pieces',
-	description: "This candy will make your pokemon evolve.",
+	description: "A favorite from Carmin-at-Sea.",
 	type: "candy",
 	evolved: false,
 	imagePath: "img/dots.jpg"},
