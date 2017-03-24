@@ -53,12 +53,11 @@ button {
 }
 
 .pokeDetails {
-/*	left: 50%;
-    background: red;
-    position: absolute;
-    top: 94%; */
     display: none;
     padding: 1%;
+    margin-left: 35%;
+    line-height: 1.5;
+    margin-top: -12%;
 }
 
  .itemImg:hover + .pokeDetails{
