@@ -5,42 +5,44 @@
 
 <body ng-app="myApp" ng-controller="AppCtrl">
   <div class="wrapper">
-	<h2>Manage your Pokebag</h2>
-  <hr size="3">
-  		<p><img src="img/pokebag.jpg"/ id="pokebag"></p>
-  		<ul class="notes" ng-hide="createPoke == true">
-        <li>Hover over a Pokemon for more info <br>
-        <li>Feed a candy to evolve your Pokemon <br>
-        <li>Click below to add to your Pokebag <br>
-        <button class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
-      </ul>
-  		<div class="pokeform" ng-show="createPoke == true">
-        <p>New Pokemon </p>
-  			Name: <input type="text" id="name" ng-model="poke.name"><br>
-  			Type:<input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
-        <input type="radio" name="which" value="candy" ng-model="poke.type">Candy
-  			<input type="radio" name="which" value="pokemon" ng-model="poke.type">Item<br>
-  			Description:<input type="text" id="description" ng-model="poke.description"><br>
-  			Image URL:<input type="text" id="image" ng-model="poke.url"><br>
-  			<button id="add-btn" ng-click="addItem(poke); createPoke = false">Add</button>
-  		</div>
+    <h2>Manage your Pokebag</h2>
+    <hr size="3">
+    <p><img src="img/pokebag.jpg"/ id="pokebag"></p>
+    <ul class="notes" ng-hide="createPoke == true">
+      <li>Hover over a Pokemon for more info <br>
+      <li>Feed a candy to evolve your Pokemon <br>
+      <li>Click below to add to your Pokebag <br>
+      <button class="addPoke" ng-click="createPoke = true">Add Item or Pokemon</button>
+    </ul>
+		<div class="pokeform" ng-show="createPoke == true">
+      <p> New Pokemon </p>
+			Name: <input type="text" id="name" ng-model="poke.name"><br>
+			Type: <input type="radio" name="which" value="pokemon" ng-model="poke.type">Pokemon
+      <input type="radio" name="which" value="candy" ng-model="poke.type">Candy
+			<input type="radio" name="which" value="pokemon" ng-model="poke.type">Item<br>
+			Description: <input type="text" id="description" ng-model="poke.description"><br>
+			Image URL: <input type="text" id="image" ng-model="poke.url"><br>
+			<button id="add-btn" ng-click="addItem(poke); createPoke = false">Add</button>
+		</div>
 
-  		<div ng-repeat="item in inBag" class="pokebag-content">
-        <button ng-show="item.type == 'pokemon'" ng-click="feedWho(item)" id="feed-btn"> Feed pokemon </button>
-  			<button ng-click="removeItem(item)" id="rm-btn">Remove</button>
-  			<img src="{{item.imagePath}}" class="itemImg"/> 
-        <div class="pokeDetails">
-          Name: {{item.name}}<br>
-          Description: {{item.description}}<br>
-          Type: {{item.type}}<br></div>
-           
-            <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> <p> Select one of your candies </p>
-              <div ng-repeat="item in inBag | filter: {type: 'candy'}"><img src="{{item.imagePath}}" ng-click="feedWhat(item)" class="itemImgCandy"/></div>
-            </div>
-          </div>
+		<div ng-repeat="item in inBag" class="pokebag-content">
+      <button ng-show="item.type == 'pokemon'" ng-click="feedWho(item)" id="feed-btn"> Feed pokemon </button>
+			<button ng-click="removeItem(item)" id="rm-btn">Remove</button>
+			<img src="{{item.imagePath}}" class="itemImg"/> 
+      <div class="pokeDetails">
+        Name: {{item.name}}<br>
+        Description: {{item.description}}<br>
+        Type: {{item.type}}<br>
+      </div>
+         
+      <div ng-show="feedPoke == true; item.name==feed.name" class="food-options"> <p> Select one of your candies </p>
+        <div ng-repeat="item in inBag | filter: {type: 'candy'}">
+          <img src="{{item.imagePath}}" ng-click="feedWhat(item)" class="itemImgCandy"/>
+        </div>
+      </div>
+    </div>
 
-	<script src="third_party/jquery.min.js"></script>
-	<script src="third_party/angular.min.js"></script>
+	<script src="node_modules/angular.min.js"></script>
 	<script src="app.js"></script>
 </div>
 </body>
