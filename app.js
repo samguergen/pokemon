@@ -28,7 +28,7 @@ angular.module('myApp', [])
 		imagePath: "img/dots.jpg"},
 	  ];
 
-		//empty array records info from selected Pokemon to be fed
+	//tracks info from selected Pokemon to feed
 	$scope.feed = {
 	  	name: '',
 	  	candy: '',
@@ -48,14 +48,14 @@ angular.module('myApp', [])
 		}
 	}
 
-	//records relevant Pokemon to feed
+	//sets info from selected Pokemon to feed
 	$scope.feedWho = function(pokemon){
-		$scope.feedPoke = true;
+		$scope.feedPoke = true; // opens candy selection area in DOM
 		$scope.feed.name = pokemon.name;
 		$scope.feed.evolved = pokemon.evolved;
 	}
 
-	//selects which candy from bag to feed to Pokemon
+	//finds and removes selected candy and Pokemon from bag before generating evolution
 	$scope.feedWhat = function(candy){
 		if ($scope.feed.evolved === false) { //feeds only non-evolved Pokemon
 
@@ -63,7 +63,7 @@ angular.module('myApp', [])
 			for (var x=0; x < $scope.inBag.length; x++){	
 				if ($scope.inBag[x].name == $scope.feed.name){
 					$scope.inBag.splice(x, 1);
-					for (var y=0; y < $scope.inBag.length; y++){
+					for (var y=0; y < $scope.inBag.length; y++){ //same for candy
 						if ($scope.inBag[y].name == candy.name){
 							$scope.inBag.splice(y, 1);
 						}				
@@ -86,7 +86,7 @@ angular.module('myApp', [])
 		}
 		
 		else {
-			alert("Your Pokemon has finished evolving. Try feeding another.")
+			alert("Your Pokemon has finished evolving. Try feeding another.");
 		}
 	}
 
